@@ -1,7 +1,8 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import React, { useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
-import { fontAwesome } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
+import { auth } from "../config/firebase";
 import colors from "../colors";
 import { Entypo } from "@expo/vector-icons";
 const catImageUrl =
@@ -12,20 +13,20 @@ const Home = () => {
 
   useEffect(() => {
     navigation.setOptions({
-      headerLeft: () => {
+      headerLeft: () => (
         <FontAwesome
           name="search"
           size={24}
           color={colors.gray}
           style={{ marginLeft: 15 }}
-        />;
-      },
-      headerRight: () => {
+        />
+      ),
+      headerRight: () => (
         <Image
           source={{ uri: catImageUrl }}
           style={{ width: 40, height: 40, marginRight: 15 }}
-        />;
-      },
+        />
+      ),
     });
   }, [navigation]);
 

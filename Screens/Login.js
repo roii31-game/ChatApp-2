@@ -12,6 +12,7 @@ import {
   Keyboard,
 } from "react-native";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../config/firebase";
 
 const backImage = require("../Images/310437216_157854786889048_3763792280492477354_n.jpg");
 
